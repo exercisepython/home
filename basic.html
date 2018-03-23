@@ -70,16 +70,22 @@
 <div id="maths" class="container-fluid">
   <div class="row">
     <div class="col-sm-8">
-      <h2 style="color: #0099ff;">MATHS</a></h2>
-      <h2> <a href="#col1Content" data-toggle="collapse">1+1</a></h2>
+      <h2>MATHS</a></h2>
+      <h2 style="text-transform: lowercase;"> <a href="#col1Content" data-toggle="collapse">a+b+5=c</a></h2>
 
       <div id="col1Content" class="collapse">
-          <p>This course is divided into 3 sections.<br>First you'll have to solve some easy maths tasks with Python. This is pretty dry, yet very effective. Then there some fun exercise that create little programs that develop your general Python knowledge. At the end you'll create your own "big" program.
-            <br>
-
-          <button class="btn btn-sm">Answer</button>
-          <button class="btn btn-sm">Answer</button>
+          <p>Code a program, where the user inputs 2 numbers. Then these numbers and 5 are added and the result is printed out like this: [number a] + [number b] + 5 = [result]<br>
       </p>
+
+      <h4 style="text-transform: none;"> <a href="#col2Content" data-toggle="collapse">Answer</a></h4>
+      <div id="col2Content" class="collapse">
+          <code>num1 = input("Enter number 1: ")<br>
+            num2 = input("Enter number 2: ")<br>
+            result = int(num1) + int(num2) + 5<br>
+            print(str(num1) + str(num2) + str(5) = result)
+          </code>
+      
+      </div>
       </div>
       
     </div>
