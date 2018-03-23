@@ -31,7 +31,7 @@
         <li><a href="#about">ABOUT</a></li>
         <li><a href="#maths">MATHS</a></li>
         <li><a href="#fun">FUN</a></li>
-        <li><a href="#program">PROGRAM</a></li>
+        <li><a href="#application">APPLICATION</a></li>
       </ul>
     </div>
   </div>
@@ -57,8 +57,9 @@
       <h2>The exercises</h2><br>
       <h4>The basics course contains exercises that are easy to solve, even foer complete beginners. After this exercises you will become more confident in the language and gain important skills for further exercises.</h4>
       <p><br>This course is divided into 3 sections.<br>First you'll have to solve some easy maths tasks with Python. This is pretty dry, yet very effective. Then there some fun exercise that create little programs that develop your general Python knowledge. At the end you'll create your own "big" program.
-
       </p>
+
+      <br><button class="btn btn-primary btn-lg"><a href="mailto: basic.submit.EP@gmail.com" target ="_blank">Submit Exercise</a></button>
   </div>
     <div class="col-sm-4">
       <span class="glyphicon glyphicon-play logo slideanim"></span>
@@ -118,7 +119,12 @@ for i in sort_list:
       <h2 style="text-transform: none;"> <a href="#col5Content" data-toggle="collapse">Kid or adult?</a></h2>
 
       <div id="col5Content" class="collapse">
-          <p>Code a program, where the user inputs his age. When he's younger than 18 it should say: "You're a kid". When he's 18 or older: "You're an adult!". Be careful that the user inputs a number bigger than 0!<br>
+          <p>Code a program, where the user answers following question:</p>
+          <code>
+            What's your age?
+          </code>
+
+          <p>When he's younger than 18 it should say: "You're a kid". When he's 18 or older: "You're an adult!". Be careful that the user inputs a number bigger than 0!<br>
       </p>
       
       <h4 style="text-transform: none;"> <a href="#col6Content" data-toggle="collapse">Answer</a></h4>
@@ -141,30 +147,236 @@ else:
       <h2 style="text-transform: none;"> <a href="#col7Content" data-toggle="collapse">Randomizer</a></h2>
 
       <div id="col7Content" class="collapse">
-          <p>Code a program, where the user inputs a range of 4 numbers. These numbers should be printed out in a random order<br>
+          <p>Code a program, where the user inputs the start and end of a range of numbers (e.g. 1 to 5). Numbers from this range should be printed out in a random order.<br>
       </p>
       
       <h4 style="text-transform: none;"> <a href="#col8Content" data-toggle="collapse">Answer</a></h4>
       <div id="col8Content" class="collapse">
           <pre>
           <code>
-num 1 = input("Enter number 1")
-num 2 = input("Enter number 2")
-num 3 = input("Enter number 3")
-num 4 = input("Enter number 4")
+numstart = input("Enter starting number: ")
+numend = input("Enter ending number:")
 
-list = [num1, num2, num3, num4]
-list.randrange(num1, num4)
+list.randrange(numstart, numend)
           </code>
           </pre>
       
       </div>
       </div>
+
+      <h2 style="text-transform: none;"> <a href="#col9Content" data-toggle="collapse">Test paper</a></h2>
+
+      <div id="col9Content" class="collapse">
+          <p>Code a program, where the user answers the following question:<br>
+            <code>
+              What is 2+2?
+            </code>
+          <p>When the user enters the right answer (4) it should print: "You're talented!".<br> When not: "You need to practise some maths!"</p>
+      </p>
       
+      <h4 style="text-transform: none;"> <a href="#col10Content" data-toggle="collapse">Answer</a></h4>
+      <div id="col10Content" class="collapse">
+          <pre>
+          <code>
+task = input("What is 2+2? ")
+if task == int(4):
+  print("You're talented!")
+else:
+  print("You need to practise some maths!")
+          </code>
+          </pre>
+      </div>
+      </div>
     </div>
-    
   </div>
-  
+</div>
+
+
+
+<div id="fun" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8 slideanim">
+      <h2>FUN</a></h2>
+
+      <h2 style="text-transform: none;"> <a href="#col11Content" data-toggle="collapse">Login</a></h2>
+
+      <div id="col11Content" class="collapse">
+          <p>Code a program, where the user inputs a username and a password (the password is "Python"). When the password is right the the program should welcome the username like this: </p>
+          <code>
+            Welcome [username]!
+          </code>
+          <p>When not the program should say</p>
+          <code>
+            Wrong password!
+          </code><br>
+      </p>
+      
+      <h4 style="text-transform: none;"> <a href="#col12Content" data-toggle="collapse">Answer</a></h4>
+      <div id="col12Content" class="collapse">
+          <pre>
+          <code>
+username = input("Username")
+password = input("Password")
+if password == "Python":
+  print("Welcome " + str(username))
+else:
+  print("Wrong password!")
+          </code>
+          </pre>
+      
+      </div>
+      </div>
+
+      <h2 style="text-transform: none;"> <a href="#col13Content" data-toggle="collapse">Birthday Calendar</a></h2>
+
+      <div id="col13Content" class="collapse">
+          <p>Code a program, where the 3 users can input their names and birthdays (one by one)</p>
+          <code>
+            Name:<br>
+            Birthday:
+          </code>
+          <p>After this a list with 3 names and birthdays should appear on the screen (use a loop!)</p>
+          <code>
+            [name1]: [birthday 1] <br>
+            etc
+          </code>
+      </p>
+      
+      <h4 style="text-transform: none;"> <a href="#col14Content" data-toggle="collapse">Answer</a></h4>
+      <div id="col14Content" class="collapse">
+          <pre>
+          <code>
+name1 = input("Name 1: ")
+birth1 = input("Birthday 1: ")
+name2 = input("Name 2: ")
+birth2 = input("Birthday 2: ")
+name3 = input("Name 3: ")
+birth3 = input("Birthday 3: ")
+
+all = [name1, birth1, name2, birth2, name3, birth3]
+
+for i in all:
+  print(i)
+
+          </code>
+          </pre>
+      
+      </div>
+      </div>
+
+      <h2 style="text-transform: none;"> <a href="#col17Content" data-toggle="collapse">Uppercase</a></h2>
+
+      <div id="col17Content" class="collapse">
+          <p>Code a program, where the user inputs a word and this word is printed out in uppercase.</p>
+          <code>
+            Input word: [hello]<br>
+            [HELLO]
+          </code>
+      
+      <h4 style="text-transform: none;"> <a href="#col18Content" data-toggle="collapse">Answer</a></h4>
+      <div id="col18Content" class="collapse">
+          <pre>
+          <code>
+word = input("Input word ")
+
+word_upper = word.upper()
+print(word_upper)
+
+          </code>
+          </pre>
+      
+      </div>
+      </div>
+
+      <h2 style="text-transform: none;"> <a href="#col15Content" data-toggle="collapse">Quiz game</a></h2>
+
+      <div id="col15Content" class="collapse">
+          <p>Code a program, that asks the user 3 questions:</p>
+          <code>
+            What's the highest mountain on earth? [Mount Everest]<br>
+            Where's the tallest building on earth? [Burj Khalifa]<br>
+            Who discovered America? [Christopher Columbus]
+          </code>
+          <p>After each question it should say "Right! or "Wrong!" </p>
+      </p>
+      
+      <h4 style="text-transform: none;"> <a href="#col16Content" data-toggle="collapse">Answer</a></h4>
+      <div id="col16Content" class="collapse">
+          <pre>
+          <code>
+q1 = input("What's the highest mountain on earth? ")
+if str(q1) == "Mount Everest":
+  print("Right!")
+else:
+  print("Wrong!")
+
+q2 = input("Where's the tallest building on earth? ")
+if str(q2) == "Burj Khalifa":
+  print("Right!")
+else:
+  print("Wrong!")
+
+q3 = input("Who discovered America? ")
+if str(q3) == "Christopher Columbus":
+  print("Right!")
+else:
+  print("Wrong!")
+
+
+          </code>
+          </pre>
+      
+      </div>
+      </div>     
+
+    </div>
+  </div>
+</div>
+
+<div id="application" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8 slideanim">
+      <h2>APPLICATION</a></h2>
+
+      <h2 style="text-transform: none;"> <a href="#col19Content" data-toggle="collapse">Calculator</a></h2>
+
+      <div id="col19Content" class="collapse">
+          <p>Code an application, where the user inputs what kind of calculation he wants to make (+,-,*,/). Then he inputs 2 numbers and the result has to be calculated. Make sure, that he can't divide by 0.</p>
+          <code>
+            Kind of calculation (+,-,*,/): <br>
+            Number 1: <br>
+            Number 2: <br>
+            Result:
+          </code>
+      
+      <h4 style="text-transform: none;"> <a href="#col20Content" data-toggle="collapse">Answer</a></h4>
+      <div id="col20Content" class="collapse">
+          <pre>
+          <code>
+calc_kind = input("Kind of calculation (+,-,*,/): ")
+num1 = int(input("Number 1: "))
+num2 = int(input("Number 2: "))
+if calc_kind == "+":
+  print(num1 + num1)
+elif calc_kind == "-":
+  print(num1 - num1)
+elif calc_kind == "*":
+  print(num1 * num1)
+elif calc_kind == "/" and num2 == "0":
+  print("You can't divide by 0")
+elif calc_kind == "/":
+  print(num1 / num1)
+
+          </code>
+          </pre>
+      
+      </div>
+      </div>
+
+
+
+    </div>
+  </div>
 </div>
 
 
@@ -172,7 +384,11 @@ list.randrange(num1, num4)
   <a href="#myPage" title="To Top">
     <span class="glyphicon glyphicon-chevron-up"></span>
   </a>
-  <p>Copyright (C) ExercisePython Inc. 2018</p>
+  
+  <p><a href="./index.html">Home</p>
+  <p><a href="./Ads.html">Advertising disclosure</a></p>
+  <p>ExercisePython 2018</p>
+
 </footer>
   
 
