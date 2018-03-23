@@ -69,21 +69,94 @@
 
 <div id="maths" class="container-fluid">
   <div class="row">
-    <div class="col-sm-8">
+    <div class="col-sm-8 slideanim">
       <h2>MATHS</a></h2>
-      <h2 style="text-transform: lowercase;"> <a href="#col1Content" data-toggle="collapse">a+b+5=c</a></h2>
+      <h2 style="text-transform: none;"> <a href="#col1Content" data-toggle="collapse">a+b+5=c</a></h2>
 
       <div id="col1Content" class="collapse">
           <p>Code a program, where the user inputs 2 numbers. Then these numbers and 5 are added and the result is printed out like this: [number a] + [number b] + 5 = [result]<br>
       </p>
-
+      
       <h4 style="text-transform: none;"> <a href="#col2Content" data-toggle="collapse">Answer</a></h4>
       <div id="col2Content" class="collapse">
-          <code>num1 = input("Enter number 1: ")<br>
-            num2 = input("Enter number 2: ")<br>
-            result = int(num1) + int(num2) + 5<br>
-            print(str(num1) + str(num2) + str(5) = result)
+          <pre>
+          <code>
+num1 = input("Enter number 1: ")
+num2 = input("Enter number 2: ")
+result = int(num1) + int(num2) + 5
+print(str(num1) + str(num2) + str(5) = result)
           </code>
+          </pre>
+      
+      </div>
+      </div>
+
+      <h2 style="text-transform: none;"> <a href="#col3Content" data-toggle="collapse">Sort</a></h2>
+
+      <div id="col3Content" class="collapse">
+          <p>Code a program, that sorts all integers from the given list and prints them out individually (Google "Python sort()" for help)<br>
+          <code>
+list = [7,34,23,5,12,3,78,22,56,12])
+          </code>
+      </p>
+      
+      <h4 style="text-transform: none;"> <a href="#col4Content" data-toggle="collapse">Answer</a></h4>
+      <div id="col4Content" class="collapse">
+          <pre>
+          <code>
+list = [7,34,23,5,12,3,78,22,56,12])
+
+sort_list = list.sort()
+for i in sort_list:
+  print(i)
+          </code>
+          </pre>
+      
+      </div>
+      </div>
+
+      <h2 style="text-transform: none;"> <a href="#col5Content" data-toggle="collapse">Kid or adult?</a></h2>
+
+      <div id="col5Content" class="collapse">
+          <p>Code a program, where the user inputs his age. When he's younger than 18 it should say: "You're a kid". When he's 18 or older: "You're an adult!". Be careful that the user inputs a number bigger than 0!<br>
+      </p>
+      
+      <h4 style="text-transform: none;"> <a href="#col6Content" data-toggle="collapse">Answer</a></h4>
+      <div id="col6Content" class="collapse">
+          <pre>
+          <code>
+age = input("Enter your age: ")<br>
+if int(age) < 18 and int(age) > 0:
+  print("You're a kid")
+if int(age) >= 18 and int(age) > 0:
+  print("You're an adult")
+else:
+  print("Please enter a number!")
+          </code>
+          </pre>
+      
+      </div>
+      </div>
+
+      <h2 style="text-transform: none;"> <a href="#col7Content" data-toggle="collapse">Randomizer</a></h2>
+
+      <div id="col7Content" class="collapse">
+          <p>Code a program, where the user inputs a range of 4 numbers. These numbers should be printed out in a random order<br>
+      </p>
+      
+      <h4 style="text-transform: none;"> <a href="#col8Content" data-toggle="collapse">Answer</a></h4>
+      <div id="col8Content" class="collapse">
+          <pre>
+          <code>
+num 1 = input("Enter number 1")
+num 2 = input("Enter number 2")
+num 3 = input("Enter number 3")
+num 4 = input("Enter number 4")
+
+list = [num1, num2, num3, num4]
+list.randrange(num1, num4)
+          </code>
+          </pre>
       
       </div>
       </div>
