@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Exercise Python</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="./style.css" type="text/css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">ExercisePython</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#maths">MATHS</a></li>
+        <li><a href="#fun">FUN</a></li>
+        <li><a href="#application">APPLICATION</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+
+
+
+
+  <br><br>
+  <h1>Advanced</h1> 
+  <p>For those, who want an improvement</p> 
+  <br><br>
+
+</div>
+
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>The exercises</h2><br>
+      <h4>The advanced course contains exercises that are a bit harder, but more interesting to solve. You will not only solidify your skills, but you will also solve pretty complex tasks easily.</h4> 
+      <p><br>This course is divided into 3 sections.<br>First you'll have to solve some easy maths tasks with Python. This is pretty dry, yet very effective. Then there some fun exercise that create little programs that develop your general Python knowledge. At the end you'll create your own application.
+      </p>
+
+      <br><button class="btn btn-primary btn-lg"><a href="mailto: basic.submit.EP@gmail.com" target ="_blank">Submit Exercise</a></button>
+  </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-play logo slideanim"></span>
+    </div>
+  </div>
+</div>
+
+
+<div id="maths" class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-8 slideanim">
+      <h2>MATHS</a></h2>
+      <h2 style="text-transform: none;"> <a href="#col1Content" data-toggle="collapse">Fibonacci</a></h2>
+
+      <div id="col1Content" class="collapse">
+          <p>Code a program, that asks the user how many Fibonnaci numbers to generate and then generates them.(Fibonnaci sequence: 1, 1, 2, 3, 5, 8, 13 ...)</p>
+          <code>
+            How many numbers to generate? 4 <br>
+            [1,1,2,3]
+          </code>
+          <p>Make sure to ask the user to enter the number of numbers in the sequence to generate.<br>
+      </p>
+      
+      <h4 style="text-transform: none;"> <a href="#col2Content" data-toggle="collapse">Answer</a></h4>
+      <div id="col2Content" class="collapse">
+          <pre>
+          <code>
+def fibonacci():
+    num = int(input("How many numbers that generates?:"))
+    i = 1
+    if num == 0:
+        fib = []
+    elif num == 1:
+        fib = [1]
+    elif num == 2:
+        fib = [1,1]
+    elif num > 2:
+        fib = [1,1]
+        while i < (num - 1):
+            fib.append(fib[i] + fib[i-1])
+            i += 1
+    return fib
+print(fibonacci())
+
+          </code>
+          </pre>
+      
+      </div>
+      </div>
+
+      <h2 style="text-transform: none;"> <a href="#col3Content" data-toggle="collapse">Overlapping lists</a></h2>
+
+      <div id="col3Content" class="collapse">
+          <p>Code a program, that prints out only the items from the lists, that are present in both<br>
+          <code>
+list1 = [2, 4, 5, 7, 9, 45, 34]<br>
+list2 = [1, 4, 9, 6, 9, 28, 45]
+          </code>
+      </p>
+      <p>Extra: The duplicates from the list should be removed.<br>
+      
+      <h4 style="text-transform: none;"> <a href="#col4Content" data-toggle="collapse">Answer</a></h4>
+      <div id="col4Content" class="collapse">
+          <pre>
+          <code>
+list1 = [2, 4, 5, 7, 9, 45, 34]
+list2 = [1, 4, 9, 6, 9, 28, 45]
+result = []
+
+for i in list1:
+  if i in list2:
+    result.append(i) 
+
+print(result)
+          </code>
+          </pre>
+      
+      </div>
+      </div>
+
+      <h2 style="text-transform: none;"> <a href="#col5Content" data-toggle="collapse">Guess the number</a></h2>
+
+      <div id="col5Content" class="collapse">
+          <p>Code a program, where the user has to guess a rondomly created number. If it's to low it should say "higher", if it's to high it should say "lower". When the right number is guessed it should say: </p>
+          <code>
+            You won! The right number is [number].<br>
+            Number of guesses: [number of guesses]
+          </code>
+
+          <p>At the end the user should know, how many tries he needed.<br><br>
+            Extra: after  10 tries it should say:
+      </p>
+      <code>
+            You lost
+          </code>
+      
+      <h4 style="text-transform: none;"> <a href="#col6Content" data-toggle="collapse">Answer</a></h4>
+      <div id="col6Content" class="collapse">
+          <pre>
+          <code>
+Coming soon!
+          </code>
+          </pre>
+      
+      </div>
+      </div>
+
+      <h2 style="text-transform: none;"> <a href="#col7Content" data-toggle="collapse">Password generator</a></h2>
+
+      <div id="col7Content" class="collapse">
+          <p>Code a program, that generates a random password with 5 digits. The digits should consist of letters and numbers.<br>
+          Extra: the user should be able to change the strength of the password (e.g add more digits)
+
+      </p>
+      
+      <h4 style="text-transform: none;"> <a href="#col8Content" data-toggle="collapse">Answer</a></h4>
+      <div id="col8Content" class="collapse">
+          <pre>
+          <code>
+Coming soon!
+          </code>
+          </pre>
+      
+      </div>
+      </div>
+
+      <h2 style="text-transform: none;"> <a href="#col9Content" data-toggle="collapse">Odd or even?</a></h2>
+
+      <div id="col9Content" class="collapse">
+          <p>Code a program where the user inputs a number. The program checks whether the number is odd or even. (Google modulo for help)<br>
+            <code>
+              Input: 4<br>
+              Odd
+            </code>
+          <p></p>
+      </p>
+      
+      <h4 style="text-transform: none;"> <a href="#col10Content" data-toggle="collapse">Answer</a></h4>
+      <div id="col10Content" class="collapse">
+          <pre>
+          <code>
+Coming soon!
+          </code>
+          </pre>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div id="fun" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8 slideanim">
+      <h2>FUN</a></h2>
+
+      <h2 style="text-transform: none;"> <a href="#col11Content" data-toggle="collapse">Reverse</a></h2>
+
+      <div id="col11Content" class="collapse">
+          <p>Code a program that lets the user input a word. Then all the letters have to be reversed. Example:</p>
+          <code>
+            Pizza<br>
+            azziP
+          </code>
+
+      
+      <h4 style="text-transform: none;"><a href="#col12Content" data-toggle="collapse">Answer</a></h4> <div id="col12Content" class="collapse">           
+        <pre>           
+          <code> Coming soon!
+
+        </code>          
+        </pre>
+      
+      </div>
+      </div>
+
+      <h2 style="text-transform: none;"> <a href="#col13Content" data-toggle="collapse">Login 2</a></h2>
+
+      <div id="col13Content" class="collapse">
+          <p>Code a program, where the user inputs his username and a password (the password is "Python"). When the password is right the the program should welcome the username. In the program, the user should be able to change the password. When the password is wrong the user should have 3 tries to enter the right password. When all tries are wrong the program should quit.</p>
+
+      
+      <h4 style="text-transform: none;"> <a href="#col14Content" data-toggle="collapse">Answer</a></h4>
+      <div id="col14Content" class="collapse">
+          <pre>
+          <code>
+name1 = input("Name 1: ")
+birth1 = input("Birthday 1: ")
+name2 = input("Name 2: ")
+birth2 = input("Birthday 2: ")
+name3 = input("Name 3: ")
+birth3 = input("Birthday 3: ")
+
+all = [name1, birth1, name2, birth2, name3, birth3]
+
+for i in all:
+  print(i)
+
+          </code>
+          </pre>
+      
+      </div>
+      </div>    
+
+    </div>
+  </div>
+</div>
+
+<div id="application" class="container-fluid bg-grey ">
+  <div class="row">
+    <div class="col-sm-8 slideanim">
+      <h2>APPLICATION</a></h2>
+
+      <h2 style="text-transform: none;"> <a href="#col19Content" data-toggle="collapse">Rock Paper Scissors</a></h2>
+
+      <div id="col19Content" class="collapse">
+          <p>Code a 2 player Rock Paper Scissors game.<br>
+          Ask for player plays (using input), compare them, print out a message of congratulations to the winner.</p>
+    
+      
+      <h4 style="text-transform: none;"> <a href="#col20Content" data-toggle="collapse">Answer</a></h4>
+      <div id="col20Content" class="collapse">
+          <pre>
+          <code>
+calc_kind = input("Kind of calculation (+,-,*,/): ")
+num1 = int(input("Number 1: "))
+num2 = int(input("Number 2: "))
+if calc_kind == "+":
+  print(num1 + num1)
+elif calc_kind == "-":
+  print(num1 - num1)
+elif calc_kind == "*":
+  print(num1 * num1)
+elif calc_kind == "/" and num2 == "0":
+  print("You can't divide by 0")
+elif calc_kind == "/":
+  print(num1 / num1)
+
+          </code>
+          </pre>
+      
+      </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  
+  <p><a href="./index.html">Home</p>
+  <p><a href="./Ads.html">Advertising disclosure</a></p>
+  <p>ExercisePython 2018</p>
+
+</footer>
+  
+
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
