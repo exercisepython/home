@@ -14,7 +14,7 @@
   body {font-size:16px;}
   .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
   .w3-half img:hover{opacity:1}
-  .header-right { 
+  .header-right {
       width: 20%;
       float: right;
       padding-top: 15px;
@@ -22,28 +22,26 @@
   </style>
   <body>
 
-  
+
 
 
   <!-- Sidebar/menu -->
   <nav class="w3-sidebar w3-blue w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
     <div class="w3-container">
-      <h2 href="#" class="w3-padding-64"><b>ExercisePython</b></h2>
+      <h2 href="./index.html" class="w3-padding-64"><b>ExercisePython</b></h2>
     </div>
-    <div class="w3-bar-block"> 
-      <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About</a> 
-      <a href="#beginner" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Beginner</a> 
-      <a href="#advanced" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Advanced</a> 
-      <a href="#pro" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Pro</a> 
-      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
-      <br><br><br><br><br><br><br><br><br><br>
-      <a class="twitter-follow-button"
-    href="https://twitter.com/exercisepython"
-    data-size="large"
-    data-show-count="false">
-  Follow @exercisepython</a>
-    
+    <div class="w3-bar-block">
+      <a href="./index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+      <a href="./readmore.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About</a>
+      <a href="./index.html#exercises" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Exercises</a>
+      <a href="./blog.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Blog</a>
+      <a href="./submit.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Submit</a>
+      <br>
+      <a href="https://twitter.com/exercisepython?ref_src=twsrc%5Etfw"
+      class="twitter-follow-button" data-size="large" data-show-count="false">Follow @exercisepython</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
     </div>
   </nav>
 
@@ -63,7 +61,7 @@
   <!-- !PAGE CONTENT! -->
   <div class="w3-main" style="margin-left:340px;margin-right:40px">
 
-    <div class="w3-container" style="margin-top:80px" id="showcase">
+    <div class="w3-container" style="margin-top:80px" id="home">
       <h1 class="w3-jumbo"><b> We improve your Python skills.</b></h1>
     </div>
 
@@ -77,60 +75,56 @@
       </div>
     </div>
 
-    <div class="w3-container" id="about" style="margin-top:75px">
+    <div class="w3-container" id="about" style="margin-top:75px;">
       <h1 class="w3-xxxlarge w3-text-blue"><b>About</b></h1>
-      <hr style="width:50px;border:5px solid-blue" class="w3-round">
-      <h3>We are a website offering you more than 30 Python exercises.</h4>
-      <p>Python is an easy and powerful language, that can be used by everyone - from beginner to professional. When learning any coding language it's very important to apply theoratical knowledge in 
+      <h3>ExercisePython is a website that offers you beginner Python exercises</h3>
+      <p>Welcome to ExercisePython! This website was build for everybody who learns Python, and/or wants to<br>
+        apply his knowledge in fun and challenging exercises. Additionaly, in the Discussions section there's a quick<br>
+        explanation to refresh the knowledge about the topic. Of course an answer is provided too. To keep updated <br> about new exercises or Blogposts,
+        make sure to follow us on <a href="https://www.twitter.com/exercisepython" target="_blank">Twitter</a>.<br><br>
+        All right, now and you can head directly over to <a href="./printing.html">
+        Exercise 1</a>, or read more about why it is so important<br> to learn Python (or any other coding languge).
       </p>
       <p><a href="./readmore.html">Read more</a></p>
     </div>
     <!-- Services -->
-    <div class="w3-container" id="beginner" style="margin-top:75px">
-      <h1 class="w3-xxxlarge w3-text-blue"><b>Beginner</b></h1>
-      <hr style="width:50px;border:5px solid-blue" class="w3-round">
-      <h4>For those who just started.</h4>
-      
+    <div class="w3-container" id="exercises" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-blue"><b>Exercises</b></h1>
+      <h1 class="w3-xxlarge w3-text-black"><b>Beginner</b></h1>
+
       <ol>
         <li><h4><a href="./printing.html">Printing</a></h4></li>
-        <li><h4><a href="./stringsandintegers.html">Strings and Integers</a></h4></li>
         <li><h4><a href="./input.html">Input</a></h4></li>
+        <li><h4><a href="./login1.html">Login 1</a></h4></li>
+        <li><h4><a href="./guessingnumbers.html">Guessing Numbers</a></h4></li>
+        <li><h4><a href="./lists.html">Grocery List</a></h4></li>
+        <li><h4><a href="./forloop.html">For - Loops</a></h4></li>
       </ol>
 
-    
+
     </div>
-    
-    <!-- Designers -->
+
+    <!-- Designers
     <div class="w3-container" id="advanced" style="margin-top:75px">
-      <h1 class="w3-xxxlarge w3-text-blue"><b>Advanced</b></h1>
-      <hr style="width:50px;border:5px solid-blue" class="w3-round">
-      <h4>For those who just started.</h4>
+      <h1 class="w3-xxlarge w3-text-blue"><b>Advanced</b></h1>
+      <h4>For everyone who wants to challenge himself</h4>
       <ol>
-        <li><h4><a href="./input.html">Input</a></h4></li>
+        <li><h4><a href="">coming soon</a></h4></li>
       </ol>
     </div>
+     -->
 
-    <!-- Packages / Pricing Tables -->
+    <!-- Packages / Pricing Tables
     <div class="w3-container" id="pro" style="margin-top:75px">
-      <h1 class="w3-xxxlarge w3-text-blue"><b>Pro</b></h1>
-      <hr style="width:50px;border:5px solid-blue" class="w3-round">
-      <h4>For those who just started.</h4>
+      <h1 class="w3-xxlarge w3-text-blue"><b>Pro</b></h1>
+      <h4>I actually have no idea how to name this</h4>
       <ol>
-        <li><h4><a href="./input.html">Input</a></h4></li>
+          <li><h4><a href="">coming soon</a></h4></li>
       </ol>
     </div>
+     -->
 
-  <br><br><br>
-    <a class="twitter-timeline" href="https://twitter.com/exercisepython?ref_src=twsrc%5Etfw">Tweets by exercisepython</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-    <!-- Contact -->
-    <div class="w3-container" id="contact" style="margin-top:75px">
-      <h1 class="w3-xxxlarge w3-text-blue"><b>Contact.</b></h1>
-      <hr style="width:50px;border:5px solid-blue" class="w3-round">
-      <h4>If you've got any suggestions or would like to submit an exerercise.</h4>
-      <h3>exercisepython@gmail.com</h3>
-
-    </div>
 
 
   <!-- End page content -->
@@ -140,7 +134,7 @@
     <!-- Header -->
   <!-- W3.CSS Container -->
   <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
-    <p class="w3-right">2018 ExercisePython<a href="./advertisingdisclosure.html" 
+    <p class="w3-right">2018 ExercisePython<a href="./advertisingdisclosure.html"
     title="W3.CSS" target="_blank" class="w3-hover-opacity"><br>Advertising Dicslosure</a></p></div>
 
   <script>
@@ -149,7 +143,7 @@
       document.getElementById("mySidebar").style.display = "block";
       document.getElementById("myOverlay").style.display = "block";
   }
-  
+
   function w3_close() {
       document.getElementById("mySidebar").style.display = "none";
       document.getElementById("myOverlay").style.display = "none";
@@ -166,4 +160,3 @@
 
   </body>
   </html>
-
